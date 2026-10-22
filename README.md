@@ -91,18 +91,6 @@ An initial unclassified district-wide NDVI calculation produced an unexpected in
 
 **The Root Cause:** Sambalpur's vast tropical deciduous forests retain moisture through November post-monsoon (NDVI > 0.65), but shed their leaves during the dry winter heat of January and February (NDVI < 0.25). Averaging all 65 million pixels across the district caused the forest leaf-drop signal to completely mask the agricultural greening in the valley.
 
-### The Decision Rule Architecture
-To isolate active agricultural fields, multi-temporal phenological metrics were calculated:
-- $\text{PEAK\_NDVI} = \max(\text{FEB}, \text{MAR})$
-- $\text{BASE\_NDVI} = \min(\text{NOV}, \text{DEC})$
-- $\text{SEASONAL\_AMPLITUDE} = \text{PEAK\_NDVI} - \text{BASE\_NDVI}$
-
-A pixel was classified as **Rabi Cropland** if and only if:
-1. **Canopy Closure:** $\text{PEAK\_NDVI} \ge 0.35$
-2. **Seasonal Dynamic Growth:** $\text{SEASONAL\_AMPLITUDE} \ge 0.08$
-3. **Deciduous Forest Rejection:** Exclude if $(\text{NOV} \ge 0.45) \land (\text{PEAK\_NDVI} \le \text{NOV})$
-4. **Water & Barren Exclusion:** Exclude if $\text{PEAK\_NDVI} \le 0.15$
-
 ---
 
 ## 6. Results & Findings
