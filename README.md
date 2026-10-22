@@ -1,7 +1,9 @@
+<br>
+
 # Multi-Temporal Sentinel-2 Satellite Monitoring of Rabi Cropland Phenology & Extent
 ### Sambalpur District, Odisha (Rabi Season 2025–2026)
 
-![Study Area](data/output/sambalpur_rabi_crop_phenology_isolated.png)
+![Study Area](data/output/sambalpur_rabi_cropland_map.png)
 
 ---
 
